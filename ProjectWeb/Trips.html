@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BellaVita</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo-2.png">
+    <link rel="stylesheet" href="traips.css">
+    <link rel="stylesheet" href="./styles.css"> 
+    <script src="https://kit.fontawesome.com/c425e24a8.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"/>
+    
+
+</head>
+<body>
+    <div class="header">
+        <nav id="navBar">
+            <img src="img/Logo-2.png" class="logo">
+            <ul class="nav-links"> 
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#trending">Popular Places</a></li>
+                <li><a href="#createGroup">My Group</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">Menu</span>
+              </div>
+              <div class="sidebar">
+                <div class="logo">
+                  <i class="bx bx-menu menu-icon"></i>
+                  <span class="logo-name">Welcom Back </span>
+                </div>
+                 <div class="sidebar-content">
+                  <ul class="lists">
+                    <li class="list">
+                      <a href="#" class="nav-link">
+                        <i class="bx bx-group icon"></i>
+                        <span class="link">Manage Groups </span>
+                      </a>
+                    </li>
+                    <li class="list">
+                      <a href="createGruop.html" class="nav-link">
+                        <i class="bx bx-home-alt icon"></i>
+                        <span class="link">Create Groups</span>
+                      </a>
+                    </li>
+                    <li class="list">
+                          <a href="#">
+                            <i class="bx bx-cog icon"></i>
+                              <span class="link_name">Setting</span>
+                          </a>
+                          <i class='bx bxs-chevron-down arrow'></i>
+                      <ul class="sub-menu">
+                          <li><a href="#">Edit Info</a></li>
+                          <li><a href="#">Update Profile Image</a></li>
+                          <li><a href="#">Change Password</a></li>
+                      </ul>
+                  </li>
+                    <li class="list">
+                      <a href="index.html" class="nav-link">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="link">Logout</span>
+                      </a>
+                    </li>
+                  </div>
+                </div>
+        </nav>
+        <section class="overlay"></section>
+        <div class="container">
+            <h1>Find Your Next Journey</h1>
+            <div class="search-bar">
+                <form>
+                    <!--<div class="location-input">
+                        <label>Location</label>
+                        <input type="text" placeholder="Where Are You Going?">
+                    </div>-->
+                    <div>
+                        <label>Type of Trip:</label>
+                        <select id="typeTrip">
+                            <option value=""></option>
+                            <option value="Camping">Camping</option>
+                            <option value="Family">Family Trip</option>
+                            <option value="Cultural tourism">Cultural tourism</option>
+                            <option value="Adventure tourism">Adventure tourism</option>
+                            <option value="Beach vacations">Beach vacations</option>
+                            <option value="Mountain tourism">Mountain tourism</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Select Country:</label>
+                        <select id="country">
+                            <option value=""></option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="France">France</option>
+                            <option value="Canada">Canada</option> 
+                            <option value="Switzerland">Switzerland</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit"><img src="img/search.png"></button>
+                </form>
+            </div>
+        </div>
+     </div>
+    </section>
+    <section id="explore">
+       <div class="container">
+           <div class="explore-header">
+               <h2>Explore</h2>
+               <p>Embark on your next adventure with BellaTrips and discover the joy of exploring new destinations ,  where every adventure begins with a single click, and every destination becomes a story worth sharing.</p>
+           </div>
+           <div class="explore-content">
+               <div class="explore-item" onclick="selectExplore('cultural')">
+                   <img src="img/Cultural.png" alt="Cultural Tourism" id="cultural">
+                   <h3>Cultural Tourism</h3>
+                   <p>Immerse yourself in the rich cultural heritage of your destination. Explore historical sites,and local traditions.</p>
+               </div>
+               <div class="explore-item" onclick="selectExplore('adventure')">
+                   <img src="img/Adventure Tourism.png" alt="Adventure Tourism" id="adventure">
+                   <h3>Adventure Tourism</h3>
+                   <p>Experience the thrill of adventure tourism with activities like rock climbing, white-water rafting, and more.</p>
+               </div>
+               <div class="explore-item" onclick="selectExplore('family')">
+                   <img src="img/family-Activities.png" alt="Family Trip" id="family">
+                   <h3>Family Trip</h3>
+                   <p>A perfect getaway for families looking to relax and have fun together. Enjoy a range of activities suitable for all ages.</p>
+               </div>
+           </div>
+           <div class="explore-button" style="display:none; text-align: center; margin-top: 20px;">
+               <button type="button" onclick="handleExplore()">Explore Now</button>
+           </div>
+       </div>
+    </section>
+     
+     <section id="createGroup">
+        <div class="cta">
+            <h3>Start your own traveling group today <br>and transform your dreams into<br> unforgettable journeys</h3>
+            <p>Gather your friends and create a new traveling group, <br>where every adventure is a new chapter in the story of your life!</p>
+            <a href="createGruop.html" class="cta-btn"> Create Group</a>
+        </div>
+
+    
+     <section id="trending">
+      <h2 class="sub-title">Trending Places</h2>
+      <div class="trending">
+          <div>
+              <img src="/img/italy-2.jpg">
+              <h3>Italy</h3>
+          </div>
+          <div>
+              <img src="/img/jordan.jpg">
+              <h3>Jordan</h3>
+          </div>
+          <div>
+              <img src="/img/France.jpg">
+              <h3> France</h3>
+          </div>
+          <div>
+              <img src="/img/switzerland.jpg">
+              <h3>Switzerland</h3>
+          </div>
+      </div>
+   </section>
+        
+        <!--<div class="about-msg">
+            <h2>About</h2>
+            <p>BellaTrips is a web application designed to connect travel enthusiasts with various travel groups, making it easier for individuals to find and join groups for exploring new destinations. Users can register, authenticate, and create personalized profiles to search for groups by name or filter by type. They can access detailed group information and decide whether to join. Public groups provide immediate access to conversations, while private groups require approval from group owners, who can manage memberships and set privacy controls. The application follows the Waterfall model, aiming to enhance travel experiences by facilitating organized group interactions.</p>
+        </div>
+     -->
+       
+    <footer id="footer">
+         
+      <p>&copy; 2024 BellaVita| All rights reserved.</p>
+    </footer>
+    <!--Footer End-->
+
+
+</body>
+</html>
+
+<script>
+const navBar = document.querySelector("nav"),
+      menuBtns = document.querySelectorAll(".menu-icon"),
+      overlay = document.querySelector(".overlay");
+
+menuBtns.forEach((menuBtn) => {
+  menuBtn.addEventListener("click", () => {
+    navBar.classList.toggle("open");
+  });
+});
+
+overlay.addEventListener("click", () => {
+  navBar.classList.remove("open");
+});
+// for Category Section
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarArrow = document.querySelector('.sidebar .arrow'),
+          subMenu = document.querySelector('.sub-menu');
+
+    // Submenu toggle functionality
+    sidebarArrow.addEventListener('click', () => {
+        subMenu.classList.toggle('open');
+        sidebarArrow.classList.toggle('rotate');
+    });
+});
+
+
+
+    let selectedOption = null;
+
+    function selectExplore(option) {
+        // Remove the selected class from all items
+        document.querySelectorAll('.explore-item').forEach(item => {
+            item.classList.remove('selected');
+        });
+
+        // Add the selected class to the clicked item
+        document.getElementById(option).parentElement.classList.add('selected');
+        selectedOption = option;
+
+        // Show the explore button
+        document.querySelector('.explore-button').style.display = 'block';
+    }
+
+    function handleExplore() {
+        if (selectedOption) {
+            switch (selectedOption) {
+                case 'cultural':
+                    window.location.href = '#'; 
+                    break;
+                case 'adventure':
+                    window.location.href = '#'; 
+                    break;
+                case 'family':
+                    window.location.href = '#'; 
+                    break;
+               
+            }
+        } else {
+            alert('Please select an option.');
+        }
+    }
+</script>
+
+
+
+    
+

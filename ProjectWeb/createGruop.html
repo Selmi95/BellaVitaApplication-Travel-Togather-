@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BellaVita</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo-2.png">
+    <link rel="stylesheet" href="createGruop.css">
+</head>
+<body>
+    <header id="home">
+                <a href="Trips.html"><img src="img/Logo-2.png" class="logo"></a>
+            </header>
+    <div class="container">
+        <h1>Gather your friends and create a new traveling group </h1>
+        <form id="createGroupForm">
+            <label for="groupName">Group Name:</label>
+            <input type="text" id="groupName" name="groupName" required>
+
+            <label for="tripType">Type of Trip:</label>
+            <select id="tripType" name="tripType" required>
+                <option value="adventure">Adventure</option>
+                <option value="leisure">Family Trip</option>
+                <option value="cultural">Cultural tourism</option>
+                <option value="business">Mountain tourism</option>
+            </select>
+            
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="privacy">Group Visibility:</label>
+            <select id="privacy" name="privacy" required>
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+
+            <button type="submit">Create Group Now !</button>
+        </form>
+        <div id="output"></div>
+    </div>
+
+    
+    <script >
+    document.getElementById('createGroupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        groupName = document.getElementById('groupName').value;
+         tripType = document.getElementById('tripType').value;
+         destination = document.getElementById('destination').value;
+         description = document.getElementById('description').value;
+         privacy = document.getElementById('privacy').value;
+    
+         outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+            <h2>Group Created Successfully!</h2>
+            <p><strong>Stat of your group is:</strong> ${privacy}</p>
+        `;
+    });
+    </script>
+</body>
+</html>

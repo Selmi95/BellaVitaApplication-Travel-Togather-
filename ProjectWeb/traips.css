@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+    } 
+    .header {
+      min-height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/img/italy.jpg) ;
+      background-size: cover;
+      background-position: center;
+  }
+    .search-bar form{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    
+    }
+    
+nav .menu {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+  }
+  .menu .menu-icon {
+    color: #333;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+  }
+  .menu .logo-name {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  nav .sidebar {
+    position:absolute;
+    top: 0;
+    right: -100%; 
+    width: 260px;
+    padding: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+  }
+  nav.open .sidebar {
+    right: 0; 
+  }
+  .sidebar .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+  }
+  .sidebar-content .list {
+    list-style: none;
+  }
+  /* CSS for Category Section */
+.sidebar .lists .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .lists .icon-link a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .lists .icon-link a .link_name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+
+.sidebar .lists .icon-link a .arrow {
+    font-size: 20px;
+    transition: all 0.4s ease;
+}
+
+.sub-menu {
+    list-style: none;
+    padding: 6px 12px;
+    display: none;
+}
+
+.sub-menu.open {
+    display: block;
+}
+
+.sub-menu .link_name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+
+.sub-menu li {
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.sub-menu li:hover {
+    background: #4070f4;
+}
+
+.sub-menu li:hover .link_name {
+    color: #fff;
+}
+
+  .list .nav-link {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .lists .nav-link:hover {
+    background-color: #4070f4;
+  }
+  .nav-link .icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: #707070;
+  }
+  .nav-link .link {
+    font-size: 16px;
+    color: #707070;
+    font-weight: 400;
+  }
+  .lists .nav-link:hover .icon,
+  .lists .nav-link:hover .link {
+    color: #fff;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    height: 1000vh;
+    width: 200%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  nav.open ~ .overlay {
+    opacity: 1;
+    right: 260px; 
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.63);
+  }
+  
+  
+   
+       
+    /* ----------------Tending Places-------------*/
+    #trending {
+        background-color: #ef000011;
+        padding: 40px;
+        text-align: center;
+        
+    }
+    .sub-title{
+         margin-bottom: 30px;
+    }
+    .trending{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-gap: 30px;
+        margin-bottom:30px;
+        
+        
+    }
+    .trending div img{
+        max-width:100%;
+        border-radius: 10px;
+    
+    
+    }
+    h2.sub-title{
+       
+        font-weight: 600%;
+        margin-top: 10px;
+        color: #000;
+        
+    }
+    .trending h3{
+       
+        font-weight: 600%;
+        margin-top: 10px;
+        
+    }
+    
+    
+    /* ------------------Call To Acction --------------*/
+    .cta{
+        margin: 0px 0;
+        background-image: linear-gradient(to right , #3f2321,transparent),url(/img/Group-travel.webp);
+        background-size: cover;
+        background-position: center;
+        padding: 5%;
+        color: #fff;
+    }
+    .cta h3{
+        font-size: 4vw;
+        line-height: 5.3vw;
+        font-weight: 500;
+    
+    }
+    .cta p{
+        font-size: 18px;
+        margin: 10px 0;
+    
+    
+    }
+    .cta-btn{
+        background-color: #ff5361;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 8px;
+        margin: 20px;
+        display: inline-block;
+    }
+    
+    /*---------------Travellers Explore----------------*/
+    #explore {
+        padding: 10px 0;
+        background-color: #f9f9f9;
+    }
+    
+    .explore .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .explore-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .explore-header h2 {
+        font-size: 30px;
+        color: #333;
+        margin-bottom: 10px;
+        margin: 0% 0 .5rem;
+        
+    }
+    
+    .explore-header p {
+        font-size: 18px;
+        color: #666;
+    }
+    
+    .explore-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .explore-item {
+        flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    }
+    
+    .explore-item img {
+        max-width: 100%;
+        height: 75%;
+        border-radius: 8px;
+    }
+  
+    
+    .explore-item h3 {
+        font-size: 24px;
+        color: #333;
+        margin-top: 15px;
+    }
+    
+    .explore-item p {
+        font-size: 16px;
+        color: #666;
+        margin-top: 10px;
+    }
+    
+    .explore-item.selected {
+        border: 2px solid #007BFF;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #ff5361;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #67050e;
+    }
+    
+    
+   
